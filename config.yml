@@ -1,0 +1,16 @@
+title: Hosted static site
+description: Hosted static site
+template:
+  repo: hosted-static-site-template
+  name: hosted-static-site
+before:
+  - type: createIssue
+    title: Welcome!
+    body: new-issue.md
+steps:
+  - title: First step
+    description: The first step in your course
+    event: issues.assigned
+    link: '{{ repoUrl }}'
+    actions:
+      - type: closeIssue
